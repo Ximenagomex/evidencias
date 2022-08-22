@@ -1,4 +1,4 @@
-/*8 de ciclos*/
+
 var n=Math.floor (Math.random ()*50) 
 var d =[]
  for(var i =1; i<=n; i++){
@@ -6,4 +6,4 @@ var d =[]
      d.push(i)
    } 
  }
-console.log ('los multiplos de 1'+n+':'+d)
+console.log ('los multiplos de'+n+':'+d)

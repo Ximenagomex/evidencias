@@ -1,8 +1,11 @@
-var x = 2;
-var n = 3;
-var m = x;
+var x = Math.round((Math.random()*5-1)+1);
+console.log('base',x)
+var n = Math.round((Math.random()*5-1)+1);
+console.log('exponente',n)
+
+var m = 1;
 
 for (var i = 1; i < n; i++) {
-    m = x * m
+    m = m * x
 }
 console.log(m);
