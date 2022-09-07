@@ -1,4 +1,4 @@
-//LIBRO ARRAY 
+
 
 let frutas = {
     nombre:['mora','uva'],
@@ -110,3 +110,4 @@ console.log(convinacion)
 compra.indexOf(0,5)
 var buscado =compra.indexOf('pop')
 console.log(`esta en la poscion ${buscado}`)
+//11. Su lista final debería verse así:

@@ -1,7 +1,7 @@
-var num1 = 8128;
+var num1 = Math.round(Math.random()*50);
+console.log(num1)
 var divisores = [];
 var perfecto = 0;
-console.log(num1)
 for (var i = 1; i<num1; i++){
     if ( num1%i == 0){
         perfecto = perfecto + i;
