@@ -54,5 +54,5 @@ class usuario {
 
 
 
-
+/*Se usa para exportar la clase */
 module.exports =usuario
