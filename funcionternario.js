@@ -39,11 +39,6 @@ function texto(cadena) {
     } //recorra a cadena 
 
     
-
-
-
-
-
 // funciones nuevas 
 let myGreeting = 'Hey there!';
 

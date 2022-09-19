@@ -1,5 +1,5 @@
 //TRABAJO EN CLASE FUNCIONES, OBJETOS
-
+//OPERADOR TERNARIO 
 function primo(num) {
     var conta=0;
     for (let i =1; i < num; i++) {
