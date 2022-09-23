@@ -12,8 +12,18 @@ function decirAlgo(x) {
     }, 2000); 
 })  
  }
-    
-    async function hablar(x) {
+//funcion clasica
+function decirAlgo(x) {
+    return new Promise (function(resolve) {
+    setTimeout(() => {
+        resolve('algo '+ x)
+    }, 2000); 
+})  
+ }
+
+
+//decirAlgo(3) 
+    async function hablar(x) {   
     const palabras = await decirAlgo(x);
     console.log(palabras);
    }
@@ -23,12 +33,28 @@ function decirAlgo(x) {
 
 
 //
-   async function arreglo(){
-    let vector=[];
-    let tamaño=Math.round((Math.random()*20-10)+10);
-    console.log('valor de la variable tam',tamaño)
-            for (let i =0; i < tamaño; i++){
-                vector[i]=Math.round(Math.random()*100);
-            } console.log(vector)
+
+//LIBRO 
+var cont=0;
+function contar(cont){
+    return new Promise (function (resolve, reject){
+        setTimeout(() => {
+            cont=cont +1
+        }, 1000);
+        resolve('el contador incrementado es : '+cont)
+    })
+} 
+console.log('el contador global es  :',cont)
+async function c(cont){        
+    const values= await contar(cont)
+    console.log(values)
 }
+setTimeout(() => {
+    for (let i=1; i < 10; i++) {
+        c(i)
+    }
+}, 2000);
+
+
+
 

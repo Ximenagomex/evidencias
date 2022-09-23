@@ -81,9 +81,9 @@ arreglo()
 
 
 // Mayusculas y Minusculas 
-function contarMayusculas() {{
-return new Promise((resolve,reject)=>{
 var cade='XIMiNa'
+function contarMayusculas(cade) {{
+return new Promise((resolve,reject)=>{
 var contar = 0;
 var mayusculas =['A','B','C','D','E','F','G','H','I','J','K','L','M','N','Ñ','O','P','Q','R','S','T','U','V','W','X','Y','Z'] 
 var as =cade.split('')
@@ -93,7 +93,8 @@ var as =cade.split('')
     contar+=1;
     }
     }
-    } setTimeout(() => {
+    } 
+    setTimeout(() => {
         resolve(cade) 
         console.log('la cadena a evaluar de cuantas mayusculas tiene es :  ',cade)
         console.log('el numero de mayusculas que tiene es de : ',contar)
@@ -101,7 +102,7 @@ var as =cade.split('')
 
    })
 }}
-contarMayusculas()
+contarMayusculas(cade)
    //console.log('el total de mayusculas es de',contarMayusculas())
 
 .then((cade)=>{
@@ -118,21 +119,26 @@ contarMayusculas()
         console.log('la cadena a evaluar de cuantas minusculas tiene es :  ',cade)
         console.log('el numero de minusculas que tiene es de : ', contar)
        }, 3000 );
+       return cade
    })
 
+   // 
 .then((cade)=>{
     setTimeout(() => {
-        let pas=cade.toLocaleLowerCase()  
-         console.log('cadena pasada a minusculas : ',pas)
+        let pas= cade.toUpperCase() 
+         console.log('cadena pasada a mayusculas : ',pas)
     }, 1000);
+    return cade
 })
 .then((cade)=>{
     setTimeout(() => {
-        let p=cade.toLocaleUpperCase()
-        console.log('la cadena pasada a mayusculas :',p)
+        let p = cade.toLowerCase()
+        console.log('la cadena pasada a minusculas :',p)
     }, 4000)
+    return cade
 })
 
+//contarMayusculas(cade)
     
    
    //console.log('las minusculas de la cadena',Minusculas())
